@@ -31,6 +31,7 @@
     .container {
         border: solid 2px #66bf3c;
         border-radius: 10px;
+        margin-left: 10px;
     }
 
     .image {
