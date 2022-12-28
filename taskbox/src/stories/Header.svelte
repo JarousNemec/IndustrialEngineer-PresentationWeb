@@ -4,8 +4,6 @@
 
   import { createEventDispatcher } from 'svelte';
 
-  export let user = null;
-
   const dispatch = createEventDispatcher();
 
   function onLogin(event) {

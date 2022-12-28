@@ -1,22 +1,41 @@
 <script>
 
-    import Tile from "./Tile.svelte";
+    import TileSingle from "./TileSingle.svelte";
+    import TileAdvanced from "./TileAdvanced.svelte";
+    import TileMedia from "./TileMedia.svelte";
 
     export let section_name
 
-    export let names = [{image: 1, text: 'Name 1'},{image: 2, text: 'Name 2'},{image: 3, text: 'Name 3'}];
+
+    export let single_tile_data = [];
+    export let advanced_tile_data = [];
+    export let media_tile_data = [];
+
+    function isEven(index) {
+        return index % 2 == 0
+    }
 
 </script>
 
 
-<centerlayout >
+<centerlayout>
     <div class="container">
-    <h3>{section_name}</h3>
-    <div class="grid-container">
-        {#each names as {image, text}, index}
-            <Tile image={image}  text={text} />
-        {/each}
-    </div>
+        <h3>{section_name}</h3>
+        <div class="grid-container">
+            {#each single_tile_data as {text}, index}
+                <TileSingle text={text} even="{isEven(index)}"/>
+            {/each}
+        </div>
+        <div class="grid-container">
+            {#each advanced_tile_data as {image, text}, index}
+                <TileAdvanced image={image} text={text} even="{isEven(index)}"/>
+            {/each}
+        </div>
+        <div class="media-grid-container">
+            {#each media_tile_data as {media, media_type}, index}
+                <TileMedia media={media} media_type={media_type} even="{isEven(index)}"/>
+            {/each}
+        </div>
     </div>
 
 </centerlayout>
@@ -27,14 +46,25 @@
     .container {
         border: 2px solid #1ea7fd;
         text-align: center;
+        width: 800px;
     }
 
     .grid-container {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
-        width: 800px;
         margin: 0 auto;
+
+        background-color: dimgray;
+    }
+
+
+    .media-grid-container {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        margin: 0 auto;
+        grid-gap: 10px ;
 
         background-color: dimgray;
     }

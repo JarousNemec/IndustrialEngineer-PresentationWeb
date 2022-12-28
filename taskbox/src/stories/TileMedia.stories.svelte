@@ -1,15 +1,15 @@
 <script>
     import {Meta, Template, Story} from "@storybook/addon-svelte-csf";
-    import Tile from "./Tile.svelte";
+    import TileMedia from "./TileMedia.svelte";
 </script>
 
 <Meta
-        title="Example/Tile"
-        component={Tile}
+        title="Example/Tile/Media"
+        component={TileMedia}
 />
 
 <Template let:args>
-    <Tile {...args}/>
+    <TileMedia {...args}/>
 </Template>
 
 
