@@ -19,3 +19,9 @@
             text: "Each block with object destructing",
   }}
 />
+<Story
+        name="Secondary"
+        args={{
+            text: "text",
+  }}
+/>

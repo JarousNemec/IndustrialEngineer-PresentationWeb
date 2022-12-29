@@ -1,34 +1,28 @@
 <script>
-    import './button.css';
-
-    /**
-     * Is this the principal call to action on the page?
-     */
-    export let primary = false;
-
-    /**
-     * What background color to use
-     */
-    export let backgroundColor;
-    /**
-     * How large should the button be?
-     */
-    export let size = 'medium';
     export let label = '';
-
-
-    let mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-
-    let style = backgroundColor ? `background-color: ${backgroundColor}` : '';
-
-
-    export let toggleView
+    export let action = () =>{
+        alert("default action")
+    }
 </script>
 
-<button
-        type="button"
-        class={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-        {style}
-        on:click={toggleView} on:keydown={toggleView}>  {label}
-</button>
+<div class="container" on:click={action}>  {label}</div>
+
+<style>
+.container{
+    background-color: var(--button);
+
+    padding: 0.5em 0.9em;
+    color: var(--content-text);
+    cursor: pointer;
+    border-color: var(--section-bg);
+
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+
+    width: min-content;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+</style>
 

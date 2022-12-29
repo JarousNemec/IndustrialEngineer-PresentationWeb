@@ -46,7 +46,7 @@
     .container {
         border: 2px solid #1ea7fd;
         text-align: center;
-        width: 800px;
+        /*width: 800px;*/
     }
 
     .grid-container {
@@ -56,7 +56,7 @@
 
         margin: 0 auto;
 
-        background-color: dimgray;
+        background-color: var(--section-bg);
     }
 
 
@@ -66,7 +66,7 @@
         margin: 0 auto;
         grid-gap: 10px ;
 
-        background-color: dimgray;
+        background-color: var(--section-bg);
     }
 
     /* On screens that are 992px or less, set the background color to blue */

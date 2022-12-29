@@ -19,7 +19,7 @@
 
     .content {
         margin: 10px;
-        background-color: #da8326;
+        background-color: var(--section-text);
         border-radius: 5px;
     }
 </style>

@@ -7,26 +7,15 @@
   title="Example/Page"
   component={Page}
   argTypes={{
-    onLogin: { action: "onLogin" },
-    onLogout: { action: "onLogout" },
-    onCreateAccount: { action: "onCreateAccount" },
+    name: { control: "text" },
+    backgroundImage: { control: "text" }
   }}
 />
 
 <Template let:args>
-  <Page
-    {...args}
-    on:login={args.onLogin}
-    on:logout={args.onLogout}
-    on:createAccount={args.onCreateAccount}
-  />
+  <Page {...args}/>
 </Template>
 
 <Story
-  name="LoggedIn"
-  args={{
-    user: {},
-  }}
+  name="Industrial Engineer Page"
 />
-
-<Story name="LoggedOut" args={{}} />

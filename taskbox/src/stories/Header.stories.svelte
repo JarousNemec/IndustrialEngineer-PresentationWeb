@@ -7,26 +7,14 @@
   title="Example/Header"
   component={Header}
   argTypes={{
-    onLogin: { action: "onLogin" },
-    onLogout: { action: "onLogout" },
-    onCreateAccount: { action: "onCreateAccount" },
+    title: { control: "text" }
   }}
 />
 
 <Template let:args>
-  <Header
-    {...args}
-    on:login={args.onLogin}
-    on:logout={args.onLogout}
-    on:createAccount={args.onCreateAccount}
-  />
+  <Header {...args}/>
 </Template>
 
 <Story
-  name="LoggedIn"
-  args={{
-    user: {},
-  }}
+  name="Industrial Header"
 />
-
-<Story name="LoggedOut" args={{}} />

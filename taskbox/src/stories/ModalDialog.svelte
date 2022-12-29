@@ -40,7 +40,7 @@
 <svelte:window on:keydown={handle_keydown}/>
 
 
-<div class="background modal-background-logoff" on:click={close} on:keydown={close}></div>
+<div class="background modal-background-logoff" on:click={close_callback} on:keydown={close_callback}></div>
 <div class="modal" role="dialog" aria-modal="true" bind:this={modal}>
     <img class="img" src="assets/images/coffee.png" alt="logo">
     <div>
