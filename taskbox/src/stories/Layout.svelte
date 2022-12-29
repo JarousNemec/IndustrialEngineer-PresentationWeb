@@ -34,10 +34,10 @@
 <div class="grid-container">
     <div class="grid-center">
         <Header/>
-<!--        <Section single_tile_data={single_tile_data} section_name="About"/>-->
-<!--        <Section advanced_tile_data={advanced_tile_data} section_name="Features"/>-->
-<!--        <Section media_tile_data={media_tile_data} section_name="Media"/>-->
-<!--        <Footer text_left="@2023 Jaroslav Němec - All rights reserved" text_right="franta.vomacka@gmail.com"/>-->
+        <Section single_tile_data={single_tile_data} section_name="About"/>
+        <Section advanced_tile_data={advanced_tile_data} section_name="Features"/>
+        <Section media_tile_data={media_tile_data} section_name="Media"/>
+        <Footer text_left="@2023 Jaroslav Němec - All rights reserved" text_right="franta.vomacka@gmail.com"/>
     </div>
 </div>
 
@@ -45,7 +45,7 @@
 <style>
     .grid-container {
         display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: auto 800px auto;
     }
     .grid-center{
         grid-column: 2;

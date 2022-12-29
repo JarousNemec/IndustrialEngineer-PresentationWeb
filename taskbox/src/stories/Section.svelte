@@ -46,6 +46,7 @@
     .container {
         border: 2px solid #1ea7fd;
         text-align: center;
+        margin: 1em;
         /*width: 800px;*/
     }
 
@@ -54,9 +55,6 @@
         flex-direction: column;
         width: 100%;
 
-        margin: 0 auto;
-
-        background-color: var(--section-bg);
     }
 
 

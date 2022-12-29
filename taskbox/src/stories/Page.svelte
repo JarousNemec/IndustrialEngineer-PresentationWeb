@@ -1,8 +1,8 @@
 <script>
     import './page.css';
     import Layout from "./Layout.svelte";
-    export let name = "Page"
-    export let backgroundImage = "./assets/bg-image.png";
+    export let name;
+    export let backgroundImage;
 </script>
 
 <svelte:head>
@@ -14,9 +14,10 @@
 </div>
 <style>
 
-    .container::before {
-        background-image: var(--image);
+    .container {
+        background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), var(--image);
         background-color: var(--page-bg);
+        background-repeat: repeat;
         width: 100vw;
         height: 100vh;
     }

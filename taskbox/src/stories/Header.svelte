@@ -1,10 +1,9 @@
 <script>
     import Button from './Button.svelte';
-    import font from './assets/font/The Foregen Rough One.ttf'
     export let title = "Industrial Engineer";
 
     function download() {
-        alert("download")
+        alert("downloadsss")
     }
 </script>
 
@@ -28,7 +27,6 @@
         margin: 0;
         font-size: 40px;
     }
-
 
     .container {
         padding: 0.5em;

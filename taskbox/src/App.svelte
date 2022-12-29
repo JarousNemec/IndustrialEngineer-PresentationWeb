@@ -4,5 +4,5 @@
 </script>
 
 <main>
-	<Page name={"Industrial Enginner"} backgroundImage="./assets/bg-image.png"/>
+	<Page name={"Industrial Enginner"} backgroundImage="./assets/images/bg-image.png"/>
 </main>

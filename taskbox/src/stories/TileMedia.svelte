@@ -16,7 +16,7 @@
 
 <tile>
     <div class="container">
-        <img src="./assets/coffee.png" alt="Rockss" class="image" on:click="{() => showModal = true}">
+        <img src="assets/images/coffee.png" alt="Rockss" class="image" on:click="{() => showModal = true}">
 
     </div>
 

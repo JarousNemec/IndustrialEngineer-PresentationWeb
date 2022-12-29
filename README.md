@@ -25,3 +25,8 @@
 
 ### Remove paddings from storybook
 - https://storybook.js.org/addons/storybook-addon-paddings
+
+### Getting resources to all needed places
+- IDE gets resources from ***"./taskbox/src/stories/assets/..."***
+- Webpack that build's web gets resources from ***"./taskbox/src/assets/..."***
+- Storybook gets resources from ***"./taskbox/public/assets/..."***
