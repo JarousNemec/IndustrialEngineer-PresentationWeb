@@ -34,37 +34,32 @@
 <div class="grid-container">
     <div class="grid-center">
         <Header/>
-        <Section single_tile_data={single_tile_data} section_name="About"/>
-        <Section advanced_tile_data={advanced_tile_data} section_name="Features"/>
-        <Section media_tile_data={media_tile_data} section_name="Media"/>
-        <Footer text_left="@2023 Jaroslav Němec - All rights reserved" text_right="franta.vomacka@gmail.com"/>
+                <Section single_tile_data={single_tile_data} section_name="About"/>
+                <Section advanced_tile_data={advanced_tile_data} section_name="Features"/>
+                <Section media_tile_data={media_tile_data} section_name="Media"/>
+                <Footer text_left="@2023 Jaroslav Němec - All rights reserved" text_right="franta.vomacka@gmail.com"/>
     </div>
 </div>
 
 
 <style>
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto 800px auto;
-    }
-    .grid-center{
+
+    .grid-center {
         grid-column: 2;
         background-color: var(--layout-bg);
     }
 
-    /* On screens that are 992px or less, set the background color to blue */
-    /*@media screen and (max-width: 992px) {*/
-    /*    .grid-container {*/
-    /*        background-color: blue;*/
-    /*    }*/
-    /*}*/
+    @media screen and (max-width: 800px) {
+        .grid-container {
+        }
+    }
 
-    /*!* On screens that are 600px or less, set the background color to olive *!*/
-    /*@media screen and (max-width: 600px) {*/
-    /*    .grid-container {*/
-    /*        background-color: olive;*/
-    /*    }*/
-    /*}*/
+    @media screen and (min-width: 800px) {
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto 800px auto;
+        }
+    }
 
 
 </style>

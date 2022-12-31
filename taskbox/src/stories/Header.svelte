@@ -1,5 +1,6 @@
 <script>
     import Button from './Button.svelte';
+
     export let title = "Industrial Engineer";
 
     function download() {
@@ -9,9 +10,14 @@
 
 <header>
     <div class="container">
-        <h1 class="title">{title}</h1>
+        <div class="wrapper">
+            <h1 class="title">{title}</h1>
+            <div>
+                <Button class="button" action={download} label="Download"/>
+            </div>
+        </div>
         <div>
-            <Button action={download} label="Download"/>
+            <img class="logo" src="assets/images/pagelogo.png" alt="pageLogo">
         </div>
     </div>
 </header>
@@ -21,6 +27,7 @@
         font-family: mainThemeFont;
         src: url("./assets/font/The Foregen Rough One.ttf");
     }
+
     h1 {
         font-family: mainThemeFont, serif;
         color: var(--label-text);
@@ -28,12 +35,28 @@
         font-size: 40px;
     }
 
-    .container {
+    .wrapper {
         padding: 0.5em;
         height: min-content;
         display: flex;
         align-items: center;
+        flex-wrap: revert;
         justify-content: space-between;
         background-color: var(--section-bg);
+    }
+
+    .container {
+
+    }
+
+    .logo {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 600px) {
+        .logo{
+            display: none;
+        }
     }
 </style>
