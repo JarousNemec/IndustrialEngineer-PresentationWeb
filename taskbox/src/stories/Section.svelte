@@ -5,8 +5,6 @@
     import TileMedia from "./TileMedia.svelte";
 
     export let section_name
-
-
     export let single_tile_data = [];
     export let advanced_tile_data = [];
     export let media_tile_data = [];
@@ -21,8 +19,10 @@
 <centerlayout>
     <div class="container">
         <h3>{section_name}</h3>
+
         <div class="grid-container">
             {#each single_tile_data as {text}, index}
+
                 <TileSingle text={text} even="{isEven(index)}"/>
             {/each}
         </div>
@@ -47,7 +47,6 @@
         border: 2px solid #1ea7fd;
         text-align: center;
         margin: 1em;
-        /*width: 800px;*/
     }
 
     .grid-container {
@@ -59,11 +58,11 @@
 
 
     .media-grid-container {
-        display: grid;
-        grid-template-columns: 3fr 3fr 3fr;
+        display: flex;
+        flex-flow: row wrap;
         margin: 0 auto;
         grid-gap: 10px ;
-
+        width: 100%;
         background-color: var(--section-bg);
     }
 

@@ -19,7 +19,7 @@
 <tile>
     <div class={even ? "container" :"container-reverse"}>
         <TileSingle text={text}/>
-        <img src="./assets/images/coffee.png" alt="Rockss" class="image" on:click="{() => showModal = true}">
+        <img src={image} alt="" class="image" on:click="{() => showModal = true}">
     </div>
 
     {#if showModal}

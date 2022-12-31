@@ -2,7 +2,6 @@
     import {createEventDispatcher, onDestroy} from 'svelte';
     import Button from "./Button.svelte";
 
-    export let type;
     let modal;
     export let close_callback
 
@@ -27,6 +26,7 @@
             e.preventDefault();
         }
     };
+
 
     const previously_focused = typeof document !== 'undefined' && document.activeElement;
 
@@ -87,10 +87,6 @@
     .modal-background-logoff {
         background: rgba(166, 226, 245, 0.8);
 
-    }
-
-    .modal-background-stop {
-        background: rgba(218, 74, 84, 0.8);
     }
 
     .modal {
