@@ -22,13 +22,10 @@
         text: 'Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility.\n' +
             'Release date: 2014 (USA) ced_tile_data 3'
     }];
-    let media_tile_data = [{media: 0, media_type: 'img'}, {media: 1, media_type: 'img'}, {
-        media: 2,
-        media_type: 'img'
-    }, {
-        media: 3,
-        media_type: 'movie',
-    },];
+    let media_tile_data = [{src: "./assets/images/coffee.png", media_type: 'img'},
+        {src: "./assets/images/bg-image.png", media_type: 'img'}, {
+        src: "./assets/images/coffee.png", media_type: 'img'}, {
+        src: "./assets/images/coffee.png", media_type: 'movie',},];
 
 </script>
 <div class="grid-container">

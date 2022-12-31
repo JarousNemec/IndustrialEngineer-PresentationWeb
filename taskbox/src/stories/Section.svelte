@@ -32,8 +32,8 @@
             {/each}
         </div>
         <div class="media-grid-container">
-            {#each media_tile_data as {media, media_type}, index}
-                <TileMedia media={media} media_type={media_type} even="{isEven(index)}"/>
+            {#each media_tile_data as {src, media_type}, index}
+                <TileMedia src={src} media_type={media_type} even="{isEven(index)}"/>
             {/each}
         </div>
     </div>

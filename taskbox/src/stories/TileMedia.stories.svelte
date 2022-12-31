@@ -16,7 +16,8 @@
 <Story
         name="Primary"
         args={{
-            text: "Each block with object destructing",
+            media_type: "movie",
             image: "Super image",
+            src: "./assets/images/coffee.png",
   }}
 />
