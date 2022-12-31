@@ -14,23 +14,24 @@
 <style>
 
     .container {
-        margin-top: 10px;
-        height: 50px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        background-color: #dddddd;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: var(--section-bg);
+        padding: 1em;
     }
 
 
     .footer-left {
         text-align: left;
-        color: #1ea7fd;
+        color: white;
         align-self: center;
+        margin: 0 auto 0 0;
     }
 
     .footer-right {
         text-align: right;
-        color: #1ea7fd;
+        color: white;
         align-self: center;
+        margin: 0 0 0 auto;
     }
 </style>
