@@ -2,7 +2,6 @@
     export let text;
 </script>
 
-
 <tilesingle>
     <div class="container">
         <div class="content">
