@@ -10,36 +10,31 @@
     export let media_tile_data = [];
 
     function isEven(index) {
-        return index % 2 == 0
+        return index % 2 === 0
     }
 
 </script>
 
+<div class="container">
+    <h3>{section_name}</h3>
 
-<centerlayout>
-    <div class="container">
-        <h3>{section_name}</h3>
+    <div class="grid-container">
+        {#each single_tile_data as {text}, index}
 
-        <div class="grid-container">
-            {#each single_tile_data as {text}, index}
-
-                <TileSingle text={text} even="{isEven(index)}"/>
-            {/each}
-        </div>
-        <div class="grid-container">
-            {#each advanced_tile_data as {image, text}, index}
-                <TileAdvanced image={image} text={text} even="{isEven(index)}"/>
-            {/each}
-        </div>
-        <div class="media-grid-container">
-            {#each media_tile_data as {src, media_type}, index}
-                <TileMedia src={src} media_type={media_type} even="{isEven(index)}"/>
-            {/each}
-        </div>
+            <TileSingle text={text} even="{isEven(index)}"/>
+        {/each}
     </div>
-
-</centerlayout>
-
+    <div class="grid-container">
+        {#each advanced_tile_data as {image, text}, index}
+            <TileAdvanced image={image} text={text} even="{isEven(index)}"/>
+        {/each}
+    </div>
+    <div class="media-grid-container">
+        {#each media_tile_data as {src, media_type}, index}
+            <TileMedia src={src} media_type={media_type} even="{isEven(index)}"/>
+        {/each}
+    </div>
+</div>
 
 <style>
 
@@ -61,7 +56,7 @@
         flex-flow: row wrap;
         justify-content: space-around;
         margin: 0 auto;
-        grid-gap: 10px ;
+        grid-gap: 10px;
         width: 100%;
     }
 

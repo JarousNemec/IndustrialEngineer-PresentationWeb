@@ -17,25 +17,19 @@
 </script>
 
 
-<tile>
+<div>
     <div class={even ? "container" :"container-reverse"}>
         <TileMedia media_type="image" src={image}/>
         <TileSingle text={text}/>
-<!--        <img src={image} alt="" class="image" on:click="{() => showModal = true}">-->
     </div>
 
     {#if showModal}
         <ModalDialog close_callback={close} on:close="{() => showModal = false}"/>
     {/if}
 
-</tile>
-
+</div>
 
 <style>
-    .image {
-        height: 100px;
-        width: 120px;
-    }
 
     .container {
         background-color: var(--section-bg);
@@ -48,5 +42,4 @@
         display: flex;
         flex-direction: row-reverse;
     }
-
 </style>

@@ -2,13 +2,12 @@
     export let text;
 </script>
 
-<tilesingle>
-    <div class="container">
-        <div class="content">
-            {text}
-        </div>
+
+<div class="container">
+    <div class="content">
+        {text}
     </div>
-</tilesingle>
+</div>
 
 
 <style>
