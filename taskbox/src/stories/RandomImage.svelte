@@ -3,12 +3,21 @@
 
     export let src;
     export let clicked = false;
-
+    export let media_type;
+    let movie = (media_type === 'movie')
 </script>
 <div class="container">
-    <img class="image" loading="lazy" on:click={()=>{
+    {#if movie}
+        <video class="image">
+            <source src={src} type="video/mp4">
+            <source src={src} type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    {:else }
+        <img class="image" loading="lazy" on:click={()=>{
 	clicked = !clicked;
 }} src={src} crossorigin="anonymous" alt="random img"/>
+    {/if}
 </div>
 
 {#if clicked}
@@ -16,10 +25,18 @@
         <div on:click={()=>{clicked = !clicked}} class="close">
             x
         </div>
+        {#if movie}
+            <video width="320" height="240" controls>
+                <source src={src} type="video/mp4">
+                <source src={src} type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        {:else }
+            <div class="modal-image">
+                <img class="m-image" loading="lazy" src={src} alt="random img"/>
+            </div>
+        {/if}
 
-        <div class="modal-image">
-            <img class="m-image" loading="lazy" src={src} alt="random img"/>
-        </div>
     </div>
 {/if}
 <style>

@@ -30,9 +30,11 @@
             'Release date: 2014 (USA) ced_tile_data 3'
     }];
     let media_tile_data = [{src: "./assets/images/coffee.png", media_type: 'img'},
-        {src: "./assets/images/bg-image.png", media_type: 'movie'}, {
-        src: "./assets/images/coffee.png", media_type: 'img'}, {
-        src: "./assets/images/coffee.png", media_type: 'movie',},];
+        {src: "./assets/images/movie.mp4", media_type: 'movie'}, {
+            src: "./assets/images/bg-image.png", media_type: 'img'
+        }, {
+            src: "./assets/images/bunny.mp4", media_type: 'movie',
+        },];
 
 </script>
 <div class="grid-container">

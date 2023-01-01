@@ -11,8 +11,8 @@
 <div class="container">
     <div class="label">Media name</div>
     <div class="img-overlay-wrap" on:click={()=>{clicked = !clicked}}>
+        <RandomImage class="random-image" media_type={media_type} clicked={clicked} src={src}/>
         {#if movie}
-            <RandomImage class="random-image" clicked={clicked} src={src}/>
             <svg viewBox="0 0 472.615 472.615">
                 <g>
                     <g>
@@ -20,9 +20,6 @@
                     </g>
                 </g>
             </svg>
-
-        {:else}
-            <RandomImage class="random-image" clicked={clicked} src={src}/>
         {/if}
     </div>
 
