@@ -13,11 +13,12 @@
 
 <style>
     .container {
-        margin: 10px;
+        background-color: var(--section-bg);
+        padding: 10px;
     }
 
     .content {
-        margin: 10px;
+        padding: 10px;
         background-color: var(--section-text);
         border-radius: 5px;
     }

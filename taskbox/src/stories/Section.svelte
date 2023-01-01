@@ -44,7 +44,6 @@
 <style>
 
     .container {
-        border: 2px solid #1ea7fd;
         text-align: center;
         margin: 1em;
     }
@@ -53,17 +52,17 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-
+        gap: 10px;
     }
 
 
     .media-grid-container {
         display: flex;
         flex-flow: row wrap;
+        justify-content: space-around;
         margin: 0 auto;
         grid-gap: 10px ;
         width: 100%;
-        background-color: var(--section-bg);
     }
 
     /* On screens that are 992px or less, set the background color to blue */

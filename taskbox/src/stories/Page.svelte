@@ -17,7 +17,6 @@
     .container {
         background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), var(--image);
         background-color: var(--page-bg);
-        background-repeat: repeat;
         width: 100vw;
         height: 100vh;
     }

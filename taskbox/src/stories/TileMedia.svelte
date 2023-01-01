@@ -39,7 +39,7 @@
 
 <style>
     .container {
-        background-color: #26c6da;
+        background-color: var(--section-bg);
         border-radius: 10px;
     }
 
@@ -68,19 +68,13 @@
     .img-overlay-wrap img { /* <= optional, for responsiveness */
         width: 100%;
         height: 100%;
-
-        /*display: block;*/
-        /*max-width: 100%;*/
-        /*height: auto;*/
+        border-radius: 20px;
     }
 
     .img-overlay-wrap svg {
         position: absolute;
         height: 100%;
         width: 100%;
-        border-radius: 10px;
-        /*top: 0;*/
-        /*left: 0;*/
     }
 
 </style>

@@ -2,6 +2,7 @@
 
     import ModalDialog from './ModalDialog.svelte';
     import TileSingle from "./TileSingle.svelte";
+    import TileMedia from "./TileMedia.svelte";
 
     let showModal = false;
 
@@ -18,8 +19,9 @@
 
 <tile>
     <div class={even ? "container" :"container-reverse"}>
+        <TileMedia media_type="image" src={image}/>
         <TileSingle text={text}/>
-        <img src={image} alt="" class="image" on:click="{() => showModal = true}">
+<!--        <img src={image} alt="" class="image" on:click="{() => showModal = true}">-->
     </div>
 
     {#if showModal}
@@ -36,11 +38,13 @@
     }
 
     .container {
+        background-color: var(--section-bg);
         display: flex;
         flex-direction: row;
     }
 
     .container-reverse {
+        background-color: var(--section-bg);
         display: flex;
         flex-direction: row-reverse;
     }

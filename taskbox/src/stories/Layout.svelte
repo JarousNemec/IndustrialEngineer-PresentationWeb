@@ -12,6 +12,13 @@
     let advanced_tile_data = [{
         image: "./assets/images/coffee.png",
         text: 'Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility.\n' +
+            'Release date: 2014 (USA) 1  Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility.\n' +
+            'Release date: 2014 (USA) 1 Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility.\n' +
+            'Release date: 2014 (USA) 1Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility.\n' +
+            'Release date: 2014 (USA) 1Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility.\n' +
+            'Release date: 2014 (USA) 1Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility.\n' +
+            'Release date: 2014 (USA) 1Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility.\n' +
+            'Release date: 2014 (USA) 1Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility.\n' +
             'Release date: 2014 (USA) 1'
     }, {
         image: "./assets/images/coffee.png",
@@ -23,7 +30,7 @@
             'Release date: 2014 (USA) ced_tile_data 3'
     }];
     let media_tile_data = [{src: "./assets/images/coffee.png", media_type: 'img'},
-        {src: "./assets/images/bg-image.png", media_type: 'img'}, {
+        {src: "./assets/images/bg-image.png", media_type: 'movie'}, {
         src: "./assets/images/coffee.png", media_type: 'img'}, {
         src: "./assets/images/coffee.png", media_type: 'movie',},];
 
