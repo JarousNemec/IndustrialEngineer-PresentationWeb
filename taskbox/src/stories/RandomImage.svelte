@@ -2,11 +2,10 @@
     import {fade} from 'svelte/transition'
 
     export let src;
-    let click;
-    let clicked = click ? true : false;
+    export let clicked = false;
 
 </script>
-<div class="image-wrapper">
+<div class="container">
     <img class="image" loading="lazy" on:click={()=>{
 	clicked = !clicked;
 }} src={src} crossorigin="anonymous" alt="random img"/>
@@ -24,8 +23,6 @@
     </div>
 {/if}
 <style>
-
-
     .m-image {
         width: 100%;
         height: auto;
@@ -44,11 +41,19 @@
     }
 
     .image {
+        margin-top: auto;
+        margin-bottom: auto;
         cursor: pointer;
-        width: 100%;
         max-width: 200px;
         max-height: 200px;
         transition: 0.125s;
+
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
     }
 
     .image:hover {

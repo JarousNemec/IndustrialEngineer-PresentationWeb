@@ -3,7 +3,6 @@
     import TileSingle from "./TileSingle.svelte";
     import TileAdvanced from "./TileAdvanced.svelte";
     import TileMedia from "./TileMedia.svelte";
-    import MediaModalDialog from "./MediaModalDialog.svelte";
 
     export let section_name
     export let single_tile_data = [];

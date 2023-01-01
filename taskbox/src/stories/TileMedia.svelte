@@ -4,14 +4,15 @@
     export let src;
     export let media_type; // image, movie
     let movie = (media_type === 'movie')
-    let media_source;
     let type;
+    let clicked = false;
 </script>
 
 <div class="container">
     <div class="label">Media name</div>
-    <div class="img-overlay-wrap" >
+    <div class="img-overlay-wrap" on:click={()=>{clicked = !clicked}}>
         {#if movie}
+            <RandomImage class="random-image" clicked={clicked} src={src}/>
             <svg viewBox="0 0 472.615 472.615">
                 <g>
                     <g>
@@ -19,9 +20,9 @@
                     </g>
                 </g>
             </svg>
-            <RandomImage class="img-overlay-wrap bordered" src={src}/>
+
         {:else}
-            <RandomImage class="img-overlay-wrap " src={src}/>
+            <RandomImage class="random-image" clicked={clicked} src={src}/>
         {/if}
     </div>
 
@@ -47,29 +48,14 @@
     .img-overlay-wrap {
         position: relative;
         display: inline-block;
-        transition: transform 10ms ease-in-out;
+
 
         cursor: pointer;
         border-radius: 10px;
-
         height: 200px;
         width: 250px;
-    }
-
-    .bordered {
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        border-style: solid;
-        border-width: 10px;
-        border-color: black;
-    }
-
-
-    .img-overlay-wrap  { /* <= optional, for responsiveness */
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
+        min-height: 200px;
+        min-width: 250px;
     }
 
     .img-overlay-wrap svg {
