@@ -1,6 +1,6 @@
 <script>
 
-    import ModalDialog from './ModalDialog.svelte';
+    import ModalDialog from './Modal.svelte';
 
     let showModal = false;
 
