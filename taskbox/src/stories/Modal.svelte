@@ -23,8 +23,11 @@
         if (ev.key == "Escape" && onTop == topDiv) close() //ESC
     }
 
+    let modal_source;
+
     /**  API **/
-    function open(callback) {
+    function open(callback, source) {
+        modal_source = source;
         closeCallback = callback
         if (visible) return
         prevOnTop = onTop
@@ -66,7 +69,8 @@
             <line x1=9 y1=3 x2=3 y2=9/>
         </svg>
         <div id='modal-content'>
-            <slot></slot>
+<!--            <slot></slot>-->
+            <img src={modal_source} alt="">
         </div>
     </div>
 </div>

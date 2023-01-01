@@ -1,50 +1,57 @@
 <script>
 
-    import ModalDialog from './Modal.svelte';
-
-    let showModal = false;
+    import Modal, {getModal} from './Modal.svelte'
 
     export let src;
     export let media_type; // image, movie
-    let movie = (media_type == 'movie')
+    let movie = (media_type === 'movie')
+    let modal_source;
 
-    function close() {
-        showModal = false
+    function onClick() {
+        modal_source = this.getElementsByClassName("image")[0].getAttribute("src");
+        console.log(modal_source);
+        getModal().open(null, modal_source)
     }
 
 </script>
 
 
 <div class="container">
-    <div class="content">
-        <div class="label">Media name</div>
-        <div class="img-overlay-wrap">
-            {#if movie}
-                <svg viewBox="0 0 122 95">
+    <div class="label">Media name</div>
+    <div class="img-overlay-wrap" on:click={onClick}><!--on:click={()=>getModal().open()}-->
+        {#if movie}
+            <svg viewBox="0 0 472.615 472.615">
+                <g>
                     <g>
-                        <path d="M12.14,0H32.8h29.43h28.8h19.71c3.34,0,6.38,1.37,8.58,3.56c2.2,2.2,3.56,5.24,3.56,8.58v7.13v57.25v7.09 c0,3.34-1.37,6.38-3.56,8.58c-2.2,2.2-5.24,3.56-8.58,3.56h-19.2c-0.16,0.03-0.33,0.04-0.51,0.04c-0.17,0-0.34-0.01-0.51-0.04 H62.74c-0.16,0.03-0.33,0.04-0.51,0.04c-0.17,0-0.34-0.01-0.51-0.04H33.31c-0.16,0.03-0.33,0.04-0.51,0.04 c-0.17,0-0.34-0.01-0.51-0.04H12.14c-3.34,0-6.38-1.37-8.58-3.56S0,86.95,0,83.61v-7.09V19.27v-7.13C0,8.8,1.37,5.76,3.56,3.56 C5.76,1.37,8.8,0,12.14,0L12.14,0z M55.19,31.24l20.53,14.32c0.32,0.2,0.61,0.48,0.84,0.81c0.92,1.33,0.58,3.14-0.74,4.06 L55.37,64.57c-0.5,0.41-1.15,0.66-1.85,0.66c-1.62,0-2.93-1.31-2.93-2.93V33.63h0.01c0-0.58,0.17-1.16,0.52-1.67 C52.05,30.64,53.87,30.32,55.19,31.24L55.19,31.24z M93.95,79.45V89.9h16.78c1.73,0,3.3-0.71,4.44-1.85 c1.14-1.14,1.85-2.71,1.85-4.44v-4.16H93.95L93.95,79.45z M88.1,89.9V79.45H65.16V89.9H88.1L88.1,89.9z M59.31,89.9V79.45H35.73 V89.9H59.31L59.31,89.9z M29.87,89.9V79.45H5.85v4.16c0,1.73,0.71,3.3,1.85,4.44c1.14,1.14,2.71,1.85,4.44,1.85H29.87L29.87,89.9z M5.85,73.6H32.8h29.43h28.8h26V22.2h-26h-28.8H32.8H5.85V73.6L5.85,73.6z M88.1,16.35V5.85H65.16v10.49H88.1L88.1,16.35z M93.95,5.85v10.49h23.07v-4.2c0-1.73-0.71-3.3-1.85-4.44c-1.14-1.14-2.71-1.85-4.44-1.85H93.95L93.95,5.85z M59.31,16.35V5.85 H35.73v10.49H59.31L59.31,16.35z M29.87,16.35V5.85H12.14c-1.73,0-3.3,0.71-4.44,1.85c-1.14,1.14-1.85,2.71-1.85,4.44v4.2H29.87 L29.87,16.35z"/>
+                        <path d="M236.308,0C105.799,0,0,105.798,0,236.308c0,130.507,105.799,236.308,236.308,236.308s236.308-105.801,236.308-236.308 C472.615,105.798,366.816,0,236.308,0z M139.346,347.733V124.88l229.37,111.428L139.346,347.733z"/>
                     </g>
-                </svg>
-            {/if}
-            <img src={src} alt="" on:click="{() => showModal = true}">
-            {#if showModal}
-                <ModalDialog close_callback={close} on:close="{() => showModal = false}"/>
-            {/if}
-        </div>
+                </g>
+            </svg>
+            <img class="image bordered" src={src} alt="">
+        {:else}
+            <img class="image" src={src} alt="">
+        {/if}
+        <Modal>
+<!--            <h1>Hello {modal_source}!</h1>-->
+<!--            <img src={modal_source} alt="">-->
+        </Modal>
     </div>
 </div>
 
 
 <style>
+    .image{
+
+    }
     .container {
+        text-align: center;
         background-color: var(--section-bg);
         border-radius: 10px;
-    }
-
-    .content {
         display: grid;
         gap: 10px;
         padding: 10px;
+        justify-content: center;
+        align-content: center;
     }
 
     .label {
@@ -57,9 +64,21 @@
         position: relative;
         display: inline-block;
         transition: transform 10ms ease-in-out;
+
+        cursor: pointer;
         border-radius: 10px;
+
         height: 200px;
         width: 250px;
+    }
+
+    .bordered {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border-style: solid;
+        border-width: 10px;
+        border-color: black;
     }
 
 
@@ -71,8 +90,13 @@
 
     .img-overlay-wrap svg {
         position: absolute;
-        height: 100%;
-        width: 100%;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        height: 50%;
+        width: 50%;
     }
 
 </style>

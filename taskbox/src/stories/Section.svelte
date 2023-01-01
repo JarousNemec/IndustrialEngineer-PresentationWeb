@@ -13,6 +13,7 @@
         return index % 2 === 0
     }
 
+
 </script>
 
 <div class="container">
@@ -20,18 +21,17 @@
 
     <div class="grid-container">
         {#each single_tile_data as {text}, index}
-
-            <TileSingle text={text} even="{isEven(index)}"/>
+            <TileSingle id={index} text={text} even="{isEven(index)}"/>
         {/each}
     </div>
     <div class="grid-container">
         {#each advanced_tile_data as {image, text}, index}
-            <TileAdvanced image={image} text={text} even="{isEven(index)}"/>
+            <TileAdvanced id={index} image={image} text={text} even="{isEven(index)}"/>
         {/each}
     </div>
     <div class="media-grid-container">
         {#each media_tile_data as {src, media_type}, index}
-            <TileMedia src={src} media_type={media_type} even="{isEven(index)}"/>
+            <TileMedia id={index} src={src} media_type={media_type} even="{isEven(index)}" />
         {/each}
     </div>
 </div>
