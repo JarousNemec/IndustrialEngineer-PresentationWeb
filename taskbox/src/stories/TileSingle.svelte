@@ -14,6 +14,7 @@
     .container {
         background-color: var(--section-bg);
         padding: 10px;
+        border-radius: 10px;
     }
 
     .content {

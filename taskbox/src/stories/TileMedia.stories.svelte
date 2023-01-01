@@ -17,7 +17,6 @@
         name="Primary"
         args={{
             media_type: "movie",
-            image: "Super image",
             src: "./assets/images/coffee.png",
   }}
 />

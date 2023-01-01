@@ -17,7 +17,7 @@
         name="Even tile"
         args={{
             text: "Each block with object destructing",
-            image: "./assets/images/coffee.png",
+            src: "./assets/images/coffee.png",
             even: true
   }}
 />
@@ -27,7 +27,7 @@
         name="Odd tile"
         args={{
             text: "Each block with object destructing",
-            image: "./assets/images/coffee.png",
+            src: "./assets/images/coffee.png",
             even: false
   }}
 />

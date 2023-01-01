@@ -3,6 +3,7 @@
     import TileSingle from "./TileSingle.svelte";
     import TileAdvanced from "./TileAdvanced.svelte";
     import TileMedia from "./TileMedia.svelte";
+    import MediaModalDialog from "./MediaModalDialog.svelte";
 
     export let section_name
     export let single_tile_data = [];
@@ -13,6 +14,13 @@
         return index % 2 === 0
     }
 
+    let displayModal = false;
+    let modal_source;
+    function openMediaTile(event) {
+        // alert(event.detail.source);
+        modal_source = event.detail.source;
+        // alert(event.detail.type);
+    }
 
 </script>
 
@@ -25,17 +33,16 @@
         {/each}
     </div>
     <div class="grid-container">
-        {#each advanced_tile_data as {image, text}, index}
-            <TileAdvanced id={index} image={image} text={text} even="{isEven(index)}"/>
+        {#each advanced_tile_data as {src, text}, index}
+            <TileAdvanced id={index} src={src} text={text} even="{isEven(index)}"/>
         {/each}
     </div>
     <div class="media-grid-container">
         {#each media_tile_data as {src, media_type}, index}
-            <TileMedia id={index} src={src} media_type={media_type} even="{isEven(index)}" />
+            <TileMedia id={index} src={src} media_type={media_type} even="{isEven(index)}" on:openTile={openMediaTile}/>
         {/each}
     </div>
 </div>
-
 <style>
 
     .container {

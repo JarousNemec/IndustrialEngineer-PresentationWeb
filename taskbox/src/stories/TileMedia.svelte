@@ -1,24 +1,16 @@
 <script>
-
-    import Modal, {getModal} from './Modal.svelte'
+    import RandomImage from "./RandomImage.svelte";
 
     export let src;
     export let media_type; // image, movie
     let movie = (media_type === 'movie')
-    let modal_source;
-
-    function onClick() {
-        modal_source = this.getElementsByClassName("image")[0].getAttribute("src");
-        console.log(modal_source);
-        getModal().open(null, modal_source)
-    }
-
+    let media_source;
+    let type;
 </script>
-
 
 <div class="container">
     <div class="label">Media name</div>
-    <div class="img-overlay-wrap" on:click={onClick}><!--on:click={()=>getModal().open()}-->
+    <div class="img-overlay-wrap" >
         {#if movie}
             <svg viewBox="0 0 472.615 472.615">
                 <g>
@@ -27,22 +19,15 @@
                     </g>
                 </g>
             </svg>
-            <img class="image bordered" src={src} alt="">
+            <RandomImage class="img-overlay-wrap bordered" src={src}/>
         {:else}
-            <img class="image" src={src} alt="">
+            <RandomImage class="img-overlay-wrap " src={src}/>
         {/if}
-        <Modal>
-<!--            <h1>Hello {modal_source}!</h1>-->
-<!--            <img src={modal_source} alt="">-->
-        </Modal>
     </div>
+
 </div>
 
-
 <style>
-    .image{
-
-    }
     .container {
         text-align: center;
         background-color: var(--section-bg);
@@ -51,7 +36,6 @@
         gap: 10px;
         padding: 10px;
         justify-content: center;
-        align-content: center;
     }
 
     .label {
@@ -82,7 +66,7 @@
     }
 
 
-    .img-overlay-wrap img { /* <= optional, for responsiveness */
+    .img-overlay-wrap  { /* <= optional, for responsiveness */
         width: 100%;
         height: 100%;
         border-radius: 20px;
@@ -98,5 +82,4 @@
         height: 50%;
         width: 50%;
     }
-
 </style>
