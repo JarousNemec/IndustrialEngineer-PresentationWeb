@@ -1,0 +1,69 @@
+{
+  "page_title": "Industrial Engineer",
+  "background_image":"./assets/images/bg-image.png",
+  "page_logo": "assets/images/pagelogo.png",
+  "single_tile_data": [
+    {
+      "text": "Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility."
+    },
+    {
+      "text": "h is one of the most powerful films that I have seen in a long time. The sheer emotion and power it is able to effectively convey is simply extraordinary. J.K Simmons Performance goes unrivalled by anyone else, and his character is just as well written as it is acted. Miles Teller is also great, and helps to amplify the chemistry between himself and Simmons.  2"
+    },
+    {
+      "text": " sacrifice will be part of your routine. You will likely have a mentor, teacher or coach whose job is to cultivate your skills while pushing you to new limits. This film questions whether the best approach is intimidation or society s current preferred method of nurturing. 3"
+    }
+  ],
+  "advanced_tile_data": [
+    {
+      "name": "Feature 1",
+      "src": "./assets/images/coffee.png",
+      "text": "Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility."
+    },
+    {
+      "name": "Feature 2",
+      "src": "./assets/images/coffee.png",
+      "text": "Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility. Release date: 2014 (USA) 2"
+    },
+    {
+      "name": "Feature 3",
+      "src": "./assets/images/coffee.png",
+      "text": "Andrew enrols in a music conservatory to become a drummer. But he is mentored by Terence Fletcher, whose unconventional training methods push him beyond the boundaries of reason and sensibility. Release date: 2014 (USA) ced_tile_data 3"
+    }
+  ],
+  "media_tile_data": [
+    {
+      "name": "Image 1",
+      "src": "./assets/images/coffee.png",
+      "media_type": "img"
+    },
+    {
+      "name": "Bear",
+      "src": "./assets/images/movie.mp4",
+      "media_type": "movie"
+    },
+    {
+      "name": "Image 2",
+      "src": "./assets/images/bg-image.png",
+      "media_type": "img"
+    },
+    {
+      "name": "Bunny",
+      "src": "./assets/images/bunny.mp4",
+      "media_type": "movie"
+    }
+  ],
+  "header_buttons": [
+    {
+      "label": "Github",
+      "url": "https://github.com/JarousNemec/IndustrialEngineer-PresentationWeb"
+    },
+    {
+      "label": "Download",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+  ],
+  "footer_texts": {
+    "left": "@2023 Jaroslav Němec - All rights reserved",
+    "right": "jarous.nemec@gmail.com"
+  }
+}

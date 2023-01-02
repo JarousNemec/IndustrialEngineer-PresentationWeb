@@ -1,6 +1,7 @@
 <script>
-    import RandomImage from "./RandomImage.svelte";
+    import MediaPlayer from "./MediaPlayer.svelte";
 
+    export let name = "Media name";
     export let src;
     export let media_type; // image, movie
     let movie = (media_type === 'movie')
@@ -9,9 +10,9 @@
 </script>
 
 <div class="container">
-    <div class="label">Media name</div>
+    <h3 class="label">{name}</h3>
     <div class="img-overlay-wrap" on:click={()=>{clicked = !clicked}}>
-        <RandomImage class="random-image" media_type={media_type} clicked={clicked} src={src}/>
+        <MediaPlayer class="random-image" media_type={media_type} clicked={clicked} src={src}/>
         {#if movie}
             <svg viewBox="0 0 472.615 472.615">
                 <g>
@@ -39,7 +40,6 @@
     .label {
         font-family: mainThemeFont, serif;
         color: var(--label-text);
-        margin-top: 5px;
     }
 
     .img-overlay-wrap {

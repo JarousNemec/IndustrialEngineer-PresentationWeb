@@ -1,15 +1,17 @@
 <script>
     import './page.css';
     import Layout from "./Layout.svelte";
-    export let name;
+    import {page_title} from "./assets/Layout_data.json";
+    import {background_image} from "./assets/Layout_data.json";
+
     export let backgroundImage;
 </script>
 
 <svelte:head>
-    <title>{name}</title>
+    <title>{page_title}</title>
 </svelte:head>
 
-<div class="container" style="--image: url({backgroundImage});">
+<div class="container" style="--image: url({background_image});">
     <Layout/>
 </div>
 <style>

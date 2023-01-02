@@ -13,18 +13,10 @@
         return index % 2 === 0
     }
 
-    let displayModal = false;
-    let modal_source;
-    function openMediaTile(event) {
-        // alert(event.detail.source);
-        modal_source = event.detail.source;
-        // alert(event.detail.type);
-    }
-
 </script>
 
 <div class="container">
-    <h3>{section_name}</h3>
+    <h2>{section_name}</h2>
 
     <div class="grid-container">
         {#each single_tile_data as {text}, index}
@@ -32,14 +24,19 @@
         {/each}
     </div>
     <div class="grid-container">
-        {#each advanced_tile_data as {src, text}, index}
-            <TileAdvanced id={index} src={src} text={text} even="{isEven(index)}"/>
+        {#each advanced_tile_data as {name, src, text}, index}
+            <div>
+                <TileAdvanced name={name} src={src} text={text} even="{isEven(index)}"/>
+            </div>
         {/each}
     </div>
-    <div class="media-grid-container">
-        {#each media_tile_data as {src, media_type}, index}
-            <TileMedia id={index} src={src} media_type={media_type} even="{isEven(index)}" on:openTile={openMediaTile}/>
+    <div class="media-container">
+
+        {#each media_tile_data as {name, src, media_type}, index}
+            <TileMedia name={name} src={src} media_type={media_type} even="{isEven(index)}"/>
         {/each}
+        <div class="space"></div>
+        <div class="space"></div>
     </div>
 </div>
 <style>
@@ -49,6 +46,16 @@
         margin: 1em;
     }
 
+    @font-face {
+        font-family: mainThemeFont;
+        src: url("./assets/font/The Foregen Rough One.ttf");
+    }
+
+    h2 {
+        font-family: mainThemeFont, serif;
+        color: var(--label-text);
+    }
+
     .grid-container {
         display: flex;
         flex-direction: column;
@@ -56,29 +63,23 @@
         gap: 10px;
     }
 
+    .space {
+        min-width: 250px;
+        row-gap: 10px;
+        margin: 0 10px;
+    }
 
-    .media-grid-container {
+    .media-container {
+
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        margin: 0 auto;
-        grid-gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        margin: auto;
+        grid-gap: 28px;
         width: 100%;
     }
-
-    /* On screens that are 992px or less, set the background color to blue */
-    @media screen and (max-width: 992px) {
-        .grid-container {
-            background-color: blue;
-        }
-    }
-
-    /* On screens that are 600px or less, set the background color to olive */
-    @media screen and (max-width: 600px) {
-        .grid-container {
-            background-color: olive;
-        }
-    }
-
-
 </style>
+
+

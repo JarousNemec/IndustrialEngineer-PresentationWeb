@@ -12,12 +12,17 @@
 </footer>
 
 <style>
+    @font-face {
+        font-family: mainThemeFont;
+        src: url("./assets/font/The Foregen Rough One.ttf");
+    }
 
     .container {
         display: flex;
         flex-wrap: wrap;
         background-color: var(--section-bg);
         padding: 1em;
+        font-family: mainThemeFont, serif;
     }
 
 

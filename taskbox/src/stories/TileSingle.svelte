@@ -11,6 +11,7 @@
 
 
 <style>
+
     .container {
         background-color: var(--section-bg);
         padding: 10px;
@@ -21,5 +22,9 @@
         padding: 10px;
         background-color: var(--section-text);
         border-radius: 5px;
+        font-weight: 500;
+        text-align: justify;
+        font-family: 'Arial', serif;
+        color: var(--content-text);
     }
 </style>

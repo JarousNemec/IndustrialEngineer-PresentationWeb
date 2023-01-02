@@ -1,10 +1,12 @@
 <script>
     import Button from './Button.svelte';
+    import {page_logo} from "./assets/Layout_data.json";
 
-    export let title = "Industrial Engineer";
+    export let title = "Page Title";
+    export let buttons;
 
-    function download() {
-        alert("downloadsss")
+    const openUrl = url => () => {
+        window.open(url, '_blank');
     }
 </script>
 
@@ -12,13 +14,13 @@
     <div class="container">
         <div class="wrapper">
             <h1 class="title">{title}</h1>
-            <div>
-                <Button class="button" action={download} label="Download"/>
+            <div class="button-container">
+                {#each buttons as {label, url}, index}
+                    <Button class="button" action={openUrl(url)} label={label}/>
+                {/each}
             </div>
         </div>
-        <div>
-            <img class="logo" src="assets/images/pagelogo.png" alt="pageLogo">
-        </div>
+        <img class="logo" src={page_logo} alt="pageLogo">
     </div>
 </header>
 
@@ -45,18 +47,27 @@
         background-color: var(--section-bg);
     }
 
-    .container {
-
-    }
 
     .logo {
-        max-width: 100%;
+        width: 100%;
         margin: 0 auto;
     }
 
     @media screen and (max-width: 600px) {
-        .logo{
+        .logo {
             display: none;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            flex-direction: row-reverse;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        .button-container {
+            display: flex;
         }
     }
 </style>
