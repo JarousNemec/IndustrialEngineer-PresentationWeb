@@ -9,14 +9,15 @@
     import {media_tile_data} from "./assets/Layout_data.json";
     import {header_buttons} from "./assets/Layout_data.json";
     import {footer_texts} from "./assets/Layout_data.json";
+    import {layout_titles} from "./assets/Layout_data.json";
 
 </script>
 <div class="grid-container">
     <div class="grid-center">
         <Header title={page_title} buttons={header_buttons}/>
-        <Section single_tile_data={single_tile_data} section_name="About"/>
-        <Section advanced_tile_data={advanced_tile_data} section_name="Features"/>
-        <Section media_tile_data={media_tile_data} section_name="Media"/>
+        <Section single_tile_data={single_tile_data} section_name={layout_titles.top}/>
+        <Section advanced_tile_data={advanced_tile_data} section_name={layout_titles.middle}/>
+        <Section media_tile_data={media_tile_data} section_name={layout_titles.bottom}/>
         <Footer text_left={footer_texts.left} text_right={footer_texts.right}/>
     </div>
 </div>

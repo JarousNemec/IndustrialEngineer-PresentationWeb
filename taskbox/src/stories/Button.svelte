@@ -20,7 +20,6 @@
     border-radius: 10px;
     border-style: solid;
 
-    width: min-content;
     font-family: sans-serif;
     font-size: 14px;
 }

@@ -34,7 +34,7 @@
             </svg>
         </div>
         {#if movie}
-            <video width="320" height="240" controls>
+            <video controls>
                 <source src={src} type="video/mp4">
                 <source src={src} type="video/ogg">
                 Your browser does not support the video tag.
@@ -108,5 +108,15 @@
 
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.9);
+    }
+    @media screen and (max-width: 1200px) {
+        video{
+            width: 90vw;
+            height: auto;
+        }
+        img{
+            width: 90vw;
+            height: auto;
+        }
     }
 </style>
